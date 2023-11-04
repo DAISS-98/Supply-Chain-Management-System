@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.TransportMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Transport">
+    <!--@mbg.generated-->
+    <!--@Table transport-->
+    <id column="transport_key" jdbcType="VARCHAR" property="transportKey" />
+    <result column="transport_name" jdbcType="VARCHAR" property="transportName" />
+    <result column="transport_person" jdbcType="VARCHAR" property="transportPerson" />
+    <result column="transport_begin_address" jdbcType="VARCHAR" property="transportBeginAddress" />
+    <result column="transport_begin_date" jdbcType="TIMESTAMP" property="transportBeginDate" />
+    <result column="transport_begin_fresh" jdbcType="VARCHAR" property="transportBeginFresh" />
+    <result column="transport_end_address" jdbcType="VARCHAR" property="transportEndAddress" />
+    <result column="transport_end_date" jdbcType="TIMESTAMP" property="transportEndDate" />
+    <result column="transport_end_fresh" jdbcType="VARCHAR" property="transportEndFresh" />
+    <result column="transport_c" jdbcType="VARCHAR" property="transportC" />
+    <result column="transport_humidity" jdbcType="VARCHAR" property="transportHumidity" />
+    <result column="transport_info" jdbcType="VARCHAR" property="transportInfo" />
+    <result column="transport_user_id" jdbcType="BIGINT" property="transportUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    transport_key, transport_name, transport_person, transport_begin_address, transport_begin_date, 
+    transport_begin_fresh, transport_end_address, transport_end_date, transport_end_fresh, 
+    transport_c, transport_humidity, transport_info, transport_user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from transport
+    where transport_key = #{transportKey,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from transport
+    where transport_key = #{transportKey,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.entity.Transport">
+    <!--@mbg.generated-->
+    insert into transport (transport_key, transport_name, transport_person, 
+      transport_begin_address, transport_begin_date, 
+      transport_begin_fresh, transport_end_address, 
+      transport_end_date, transport_end_fresh, 
+      transport_c, transport_humidity, transport_info, 
+      transport_user_id)
+    values (#{transportKey,jdbcType=VARCHAR}, #{transportName,jdbcType=VARCHAR}, #{transportPerson,jdbcType=VARCHAR}, 
+      #{transportBeginAddress,jdbcType=VARCHAR}, #{transportBeginDate,jdbcType=TIMESTAMP}, 
+      #{transportBeginFresh,jdbcType=VARCHAR}, #{transportEndAddress,jdbcType=VARCHAR}, 
+      #{transportEndDate,jdbcType=TIMESTAMP}, #{transportEndFresh,jdbcType=VARCHAR}, 
+      #{transportC,jdbcType=VARCHAR}, #{transportHumidity,jdbcType=VARCHAR}, #{transportInfo,jdbcType=VARCHAR}, 
+      #{transportUserId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.Transport">
+    <!--@mbg.generated-->
+    insert into transport
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="transportKey != null">
+        transport_key,
+      </if>
+      <if test="transportName != null">
+        transport_name,
+      </if>
+      <if test="transportPerson != null">
+        transport_person,
+      </if>
+      <if test="transportBeginAddress != null">
+        transport_begin_address,
+      </if>
+      <if test="transportBeginDate != null">
+        transport_begin_date,
+      </if>
+      <if test="transportBeginFresh != null">
+        transport_begin_fresh,
+      </if>
+      <if test="transportEndAddress != null">
+        transport_end_address,
+      </if>
+      <if test="transportEndDate != null">
+        transport_end_date,
+      </if>
+      <if test="transportEndFresh != null">
+        transport_end_fresh,
+      </if>
+      <if test="transportC != null">
+        transport_c,
+      </if>
+      <if test="transportHumidity != null">
+        transport_humidity,
+      </if>
+      <if test="transportInfo != null">
+        transport_info,
+      </if>
+      <if test="transportUserId != null">
+        transport_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="transportKey != null">
+        #{transportKey,jdbcType=VARCHAR},
+      </if>
+      <if test="transportName != null">
+        #{transportName,jdbcType=VARCHAR},
+      </if>
+      <if test="transportPerson != null">
+        #{transportPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="transportBeginAddress != null">
+        #{transportBeginAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="transportBeginDate != null">
+        #{transportBeginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="transportBeginFresh != null">
+        #{transportBeginFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="transportEndAddress != null">
+        #{transportEndAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="transportEndDate != null">
+        #{transportEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="transportEndFresh != null">
+        #{transportEndFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="transportC != null">
+        #{transportC,jdbcType=VARCHAR},
+      </if>
+      <if test="transportHumidity != null">
+        #{transportHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="transportInfo != null">
+        #{transportInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="transportUserId != null">
+        #{transportUserId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.Transport">
+    <!--@mbg.generated-->
+    update transport
+    <set>
+      <if test="transportName != null">
+        transport_name = #{transportName,jdbcType=VARCHAR},
+      </if>
+      <if test="transportPerson != null">
+        transport_person = #{transportPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="transportBeginAddress != null">
+        transport_begin_address = #{transportBeginAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="transportBeginDate != null">
+        transport_begin_date = #{transportBeginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="transportBeginFresh != null">
+        transport_begin_fresh = #{transportBeginFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="transportEndAddress != null">
+        transport_end_address = #{transportEndAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="transportEndDate != null">
+        transport_end_date = #{transportEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="transportEndFresh != null">
+        transport_end_fresh = #{transportEndFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="transportC != null">
+        transport_c = #{transportC,jdbcType=VARCHAR},
+      </if>
+      <if test="transportHumidity != null">
+        transport_humidity = #{transportHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="transportInfo != null">
+        transport_info = #{transportInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="transportUserId != null">
+        transport_user_id = #{transportUserId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where transport_key = #{transportKey,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.Transport">
+    <!--@mbg.generated-->
+    update transport
+    set transport_name = #{transportName,jdbcType=VARCHAR},
+      transport_person = #{transportPerson,jdbcType=VARCHAR},
+      transport_begin_address = #{transportBeginAddress,jdbcType=VARCHAR},
+      transport_begin_date = #{transportBeginDate,jdbcType=TIMESTAMP},
+      transport_begin_fresh = #{transportBeginFresh,jdbcType=VARCHAR},
+      transport_end_address = #{transportEndAddress,jdbcType=VARCHAR},
+      transport_end_date = #{transportEndDate,jdbcType=TIMESTAMP},
+      transport_end_fresh = #{transportEndFresh,jdbcType=VARCHAR},
+      transport_c = #{transportC,jdbcType=VARCHAR},
+      transport_humidity = #{transportHumidity,jdbcType=VARCHAR},
+      transport_info = #{transportInfo,jdbcType=VARCHAR},
+      transport_user_id = #{transportUserId,jdbcType=BIGINT}
+    where transport_key = #{transportKey,jdbcType=VARCHAR}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2023-01-16-->
+  <select id="selectByAll" resultMap="BaseResultMap">
+        select b.process_key  superKey,
+        <include refid="Base_Column_List" />
+        from transport a
+        right  join `process`  b on a.transport_key = b.process_key
+        <where>
+            <if test="transportKey != null">
+                and transport_key=#{transportKey,jdbcType=VARCHAR}
+            </if>
+            <if test="transportName != null">
+                and transport_name=#{transportName,jdbcType=VARCHAR}
+            </if>
+            <if test="transportPerson != null">
+                and transport_person=#{transportPerson,jdbcType=VARCHAR}
+            </if>
+            <if test="transportBeginAddress != null">
+                and transport_begin_address=#{transportBeginAddress,jdbcType=VARCHAR}
+            </if>
+            <if test="transportBeginDate != null">
+                and transport_begin_date=#{transportBeginDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="transportBeginFresh != null">
+                and transport_begin_fresh=#{transportBeginFresh,jdbcType=VARCHAR}
+            </if>
+            <if test="transportEndAddress != null">
+                and transport_end_address=#{transportEndAddress,jdbcType=VARCHAR}
+            </if>
+            <if test="transportEndDate != null">
+                and transport_end_date=#{transportEndDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="transportEndFresh != null">
+                and transport_end_fresh=#{transportEndFresh,jdbcType=VARCHAR}
+            </if>
+            <if test="transportC != null">
+                and transport_c=#{transportC,jdbcType=VARCHAR}
+            </if>
+            <if test="transportHumidity != null">
+                and transport_humidity=#{transportHumidity,jdbcType=VARCHAR}
+            </if>
+            <if test="transportInfo != null">
+                and transport_info=#{transportInfo,jdbcType=VARCHAR}
+            </if>
+            <if test="transportUserId != null">
+                and ( transport_user_id=#{transportUserId,jdbcType=BIGINT}  or transport_user_id is null )
+            </if>
+        </where>
+    </select>
+</mapper>

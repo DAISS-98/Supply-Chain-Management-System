@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ProduceMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Produce">
+    <!--@mbg.generated-->
+    <!--@Table produce-->
+    <id column="produce_key" jdbcType="VARCHAR" property="produceKey" />
+    <result column="produce_name" jdbcType="VARCHAR" property="produceName" />
+    <result column="produce_num" jdbcType="VARCHAR" property="produceNum" />
+    <result column="produce_type" jdbcType="VARCHAR" property="produceType" />
+    <result column="produce_date" jdbcType="TIMESTAMP" property="produceDate" />
+    <result column="produce_address" jdbcType="VARCHAR" property="produceAddress" />
+    <result column="produce_cycle" jdbcType="VARCHAR" property="produceCycle" />
+    <result column="produce_person" jdbcType="VARCHAR" property="producePerson" />
+    <result column="produce_fresh" jdbcType="VARCHAR" property="produceFresh" />
+    <result column="produce_c" jdbcType="VARCHAR" property="produceC" />
+    <result column="produce_humidity" jdbcType="VARCHAR" property="produceHumidity" />
+    <result column="produce_supplier_name" jdbcType="VARCHAR" property="produceSupplierName" />
+    <result column="produce_sub_name" jdbcType="VARCHAR" property="produceSubName" />
+    <result column="produce_user_id" jdbcType="BIGINT" property="produceUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    produce_key, produce_name, produce_num, produce_type, produce_date, produce_address, 
+    produce_cycle, produce_person, produce_fresh, produce_c, produce_humidity, produce_supplier_name, 
+    produce_sub_name, produce_user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from produce
+    where produce_key = #{produceKey,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from produce
+    where produce_key = #{produceKey,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.entity.Produce">
+    <!--@mbg.generated-->
+    insert into produce (produce_key, produce_name, produce_num, 
+      produce_type, produce_date, produce_address, 
+      produce_cycle, produce_person, produce_fresh, 
+      produce_c, produce_humidity, produce_supplier_name, 
+      produce_sub_name, produce_user_id)
+    values (#{produceKey,jdbcType=VARCHAR}, #{produceName,jdbcType=VARCHAR}, #{produceNum,jdbcType=VARCHAR}, 
+      #{produceType,jdbcType=VARCHAR}, #{produceDate,jdbcType=TIMESTAMP}, #{produceAddress,jdbcType=VARCHAR}, 
+      #{produceCycle,jdbcType=VARCHAR}, #{producePerson,jdbcType=VARCHAR}, #{produceFresh,jdbcType=VARCHAR}, 
+      #{produceC,jdbcType=VARCHAR}, #{produceHumidity,jdbcType=VARCHAR}, #{produceSupplierName,jdbcType=VARCHAR}, 
+      #{produceSubName,jdbcType=VARCHAR}, #{produceUserId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.Produce">
+    <!--@mbg.generated-->
+    insert into produce
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="produceKey != null">
+        produce_key,
+      </if>
+      <if test="produceName != null">
+        produce_name,
+      </if>
+      <if test="produceNum != null">
+        produce_num,
+      </if>
+      <if test="produceType != null">
+        produce_type,
+      </if>
+      <if test="produceDate != null">
+        produce_date,
+      </if>
+      <if test="produceAddress != null">
+        produce_address,
+      </if>
+      <if test="produceCycle != null">
+        produce_cycle,
+      </if>
+      <if test="producePerson != null">
+        produce_person,
+      </if>
+      <if test="produceFresh != null">
+        produce_fresh,
+      </if>
+      <if test="produceC != null">
+        produce_c,
+      </if>
+      <if test="produceHumidity != null">
+        produce_humidity,
+      </if>
+      <if test="produceSupplierName != null">
+        produce_supplier_name,
+      </if>
+      <if test="produceSubName != null">
+        produce_sub_name,
+      </if>
+      <if test="produceUserId != null">
+        produce_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="produceKey != null">
+        #{produceKey,jdbcType=VARCHAR},
+      </if>
+      <if test="produceName != null">
+        #{produceName,jdbcType=VARCHAR},
+      </if>
+      <if test="produceNum != null">
+        #{produceNum,jdbcType=VARCHAR},
+      </if>
+      <if test="produceType != null">
+        #{produceType,jdbcType=VARCHAR},
+      </if>
+      <if test="produceDate != null">
+        #{produceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="produceAddress != null">
+        #{produceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="produceCycle != null">
+        #{produceCycle,jdbcType=VARCHAR},
+      </if>
+      <if test="producePerson != null">
+        #{producePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="produceFresh != null">
+        #{produceFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="produceC != null">
+        #{produceC,jdbcType=VARCHAR},
+      </if>
+      <if test="produceHumidity != null">
+        #{produceHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="produceSupplierName != null">
+        #{produceSupplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="produceSubName != null">
+        #{produceSubName,jdbcType=VARCHAR},
+      </if>
+      <if test="produceUserId != null">
+        #{produceUserId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.Produce">
+    <!--@mbg.generated-->
+    update produce
+    <set>
+      <if test="produceName != null">
+        produce_name = #{produceName,jdbcType=VARCHAR},
+      </if>
+      <if test="produceNum != null">
+        produce_num = #{produceNum,jdbcType=VARCHAR},
+      </if>
+      <if test="produceType != null">
+        produce_type = #{produceType,jdbcType=VARCHAR},
+      </if>
+      <if test="produceDate != null">
+        produce_date = #{produceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="produceAddress != null">
+        produce_address = #{produceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="produceCycle != null">
+        produce_cycle = #{produceCycle,jdbcType=VARCHAR},
+      </if>
+      <if test="producePerson != null">
+        produce_person = #{producePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="produceFresh != null">
+        produce_fresh = #{produceFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="produceC != null">
+        produce_c = #{produceC,jdbcType=VARCHAR},
+      </if>
+      <if test="produceHumidity != null">
+        produce_humidity = #{produceHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="produceSupplierName != null">
+        produce_supplier_name = #{produceSupplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="produceSubName != null">
+        produce_sub_name = #{produceSubName,jdbcType=VARCHAR},
+      </if>
+      <if test="produceUserId != null">
+        produce_user_id = #{produceUserId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where produce_key = #{produceKey,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.Produce">
+    <!--@mbg.generated-->
+    update produce
+    set produce_name = #{produceName,jdbcType=VARCHAR},
+      produce_num = #{produceNum,jdbcType=VARCHAR},
+      produce_type = #{produceType,jdbcType=VARCHAR},
+      produce_date = #{produceDate,jdbcType=TIMESTAMP},
+      produce_address = #{produceAddress,jdbcType=VARCHAR},
+      produce_cycle = #{produceCycle,jdbcType=VARCHAR},
+      produce_person = #{producePerson,jdbcType=VARCHAR},
+      produce_fresh = #{produceFresh,jdbcType=VARCHAR},
+      produce_c = #{produceC,jdbcType=VARCHAR},
+      produce_humidity = #{produceHumidity,jdbcType=VARCHAR},
+      produce_supplier_name = #{produceSupplierName,jdbcType=VARCHAR},
+      produce_sub_name = #{produceSubName,jdbcType=VARCHAR},
+      produce_user_id = #{produceUserId,jdbcType=BIGINT}
+    where produce_key = #{produceKey,jdbcType=VARCHAR}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2023-01-16-->
+  <select id="selectByAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from produce
+        <where>
+            <if test="produceKey != null">
+                and produce_key=#{produceKey,jdbcType=VARCHAR}
+            </if>
+            <if test="produceName != null">
+                and produce_name=#{produceName,jdbcType=VARCHAR}
+            </if>
+            <if test="produceNum != null">
+                and produce_num=#{produceNum,jdbcType=VARCHAR}
+            </if>
+            <if test="produceType != null">
+                and produce_type=#{produceType,jdbcType=VARCHAR}
+            </if>
+            <if test="produceDate != null">
+                and produce_date=#{produceDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="produceAddress != null">
+                and produce_address=#{produceAddress,jdbcType=VARCHAR}
+            </if>
+            <if test="produceCycle != null">
+                and produce_cycle=#{produceCycle,jdbcType=VARCHAR}
+            </if>
+            <if test="producePerson != null">
+                and produce_person=#{producePerson,jdbcType=VARCHAR}
+            </if>
+            <if test="produceFresh != null">
+                and produce_fresh=#{produceFresh,jdbcType=VARCHAR}
+            </if>
+            <if test="produceC != null">
+                and produce_c=#{produceC,jdbcType=VARCHAR}
+            </if>
+            <if test="produceHumidity != null">
+                and produce_humidity=#{produceHumidity,jdbcType=VARCHAR}
+            </if>
+            <if test="produceSupplierName != null">
+                and produce_supplier_name=#{produceSupplierName,jdbcType=VARCHAR}
+            </if>
+            <if test="produceSubName != null">
+                and produce_sub_name=#{produceSubName,jdbcType=VARCHAR}
+            </if>
+            <if test="produceUserId != null">
+                and produce_user_id=#{produceUserId,jdbcType=BIGINT}
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="43251e41-97a0-432a-9005-1508da19a9c5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="D:\Environment\GO" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\myMaven\respository_shine" />
+        <option name="mavenHome" value="D:\software\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="userSettingsFile" value="F:\myMaven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rD6LrOeiFllxAo4LNeaikbLKEH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/codeSource/agriculture/sdk/sdkdemo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43251e41-97a0-432a-9005-1508da19a9c5" name="Default Changelist" comment="" />
+      <created>1618498259738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618498259738</updated>
+      <workItem from="1618498260773" duration="3890000" />
+      <workItem from="1618637376782" duration="10886000" />
+      <workItem from="1618730779029" duration="1542000" />
+      <workItem from="1619449110807" duration="752000" />
+      <workItem from="1619490456214" duration="88000" />
+      <workItem from="1619516351634" duration="6000" />
+      <workItem from="1619527963987" duration="6322000" />
+      <workItem from="1619571730679" duration="6155000" />
+      <workItem from="1620611018146" duration="606000" />
+      <workItem from="1620722479929" duration="267000" />
+      <workItem from="1620795478038" duration="38000" />
+      <workItem from="1620912139457" duration="2856000" />
+      <workItem from="1621133344065" duration="1523000" />
+      <workItem from="1621180410208" duration="1035000" />
+      <workItem from="1621474454899" duration="2835000" />
+      <workItem from="1621478286753" duration="992000" />
+      <workItem from="1621479934405" duration="391000" />
+      <workItem from="1641529428238" duration="1046000" />
+      <workItem from="1641532607939" duration="6000" />
+      <workItem from="1647088756117" duration="799000" />
+      <workItem from="1647136799360" duration="18000" />
+      <workItem from="1647140277823" duration="35000" />
+      <workItem from="1679827700618" duration="208000" />
+      <workItem from="1679829287204" duration="618000" />
+      <workItem from="1679834733983" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

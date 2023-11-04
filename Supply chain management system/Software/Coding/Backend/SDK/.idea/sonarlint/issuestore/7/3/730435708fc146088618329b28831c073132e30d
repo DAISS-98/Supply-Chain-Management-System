@@ -1,0 +1,31 @@
+
+M
+java:S2629A"7Use the built-in formatting to construct this argument.(”Æ¡ø
+V
+java:S3416'";Update this logger to use "QueryChainCodeController.class".(Ùð«Ðùÿÿÿÿ
+V	java:S125?"<This block of commented-out lines of code should be removed.(ÌŠÛÒþÿÿÿÿ
+W
+java:S3457A"AFormat specifiers should be used instead of string concatenation.(”Æ¡ø
+a
+java:S1858B"F"map" is already a string, there's no need to call "toString()" on it.(»ö¯¯ûÿÿÿÿ
+Q	java:S125G"<This block of commented-out lines of code should be removed.(œþÙ¯
+V	java:S125`"<This block of commented-out lines of code should be removed.(ÈÀûÐùÿÿÿÿ
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(éÊ Â
+S	java:S106z"9Replace this use of System.out or System.err by a logger.(ÔŒÎûÿÿÿÿ
+V	java:S125s"<This block of commented-out lines of code should be removed.(Õ·Ò„þÿÿÿÿ
+E
+java:S1128"/Remove this unused import 'com.fabric.po.Cost'.(í—é©
+K
+java:S1128	"0Remove this unused import 'com.fabric.po.Trace'.(×ó¤ëùÿÿÿÿ
+P
+java:S1128"5Remove this unused import 'com.fabric.utils.MyUtils'.(þ†´äýÿÿÿÿ
+Q
+java:S1128"6Remove this unused import 'com.fabric.utils.MyUtils1'.(ŸŸ£Ùÿÿÿÿÿ
+N
+java:S1128"3Remove this unused import 'net.sf.json.JSONObject'.(©ã¨þÿÿÿÿ
+d
+java:S1128"NRemove this unused import 'org.apache.commons.collections.map.ListOrderedMap'.(”´Ô
+l
+java:S1128"QRemove this unused import 'org.springframework.web.bind.annotation.RequestParam'.(Â¬À·ùÿÿÿÿ
+E
+java:S1128 "*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ

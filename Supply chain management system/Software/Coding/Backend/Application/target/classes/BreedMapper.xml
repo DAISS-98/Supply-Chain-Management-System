@@ -1,0 +1,475 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="com.dao.AAAMapper">-->
+<!--  <resultMap id="BaseResultMap" type="com.entity.AAA">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    &lt;!&ndash;@Table breed&ndash;&gt;-->
+<!--    <id column="breed_only_key" jdbcType="VARCHAR" property="breedOnlyKey" />-->
+<!--    <result column="user_id" jdbcType="INTEGER" property="userId" />-->
+<!--    <result column="product_name" jdbcType="VARCHAR" property="productName" />-->
+<!--    <result column="product_num" jdbcType="INTEGER" property="productNum" />-->
+<!--    <result column="unit" jdbcType="VARCHAR" property="unit" />-->
+<!--    <result column="origin_address" jdbcType="VARCHAR" property="originAddress" />-->
+<!--    <result column="product_no" jdbcType="VARCHAR" property="productNo" />-->
+<!--    <result column="breed_time" jdbcType="TIMESTAMP" property="breedTime" />-->
+<!--    <result column="medicine_name" jdbcType="VARCHAR" property="medicineName" />-->
+<!--    <result column="medicine_manufactor" jdbcType="VARCHAR" property="medicineManufactor" />-->
+<!--    <result column="medicine_no" jdbcType="VARCHAR" property="medicineNo" />-->
+<!--    <result column="medicine_use_time" jdbcType="TIMESTAMP" property="medicineUseTime" />-->
+<!--    <result column="medicine_unit" jdbcType="VARCHAR" property="medicineUnit" />-->
+<!--    <result column="feed_name" jdbcType="VARCHAR" property="feedName" />-->
+<!--    <result column="feed_manufactor" jdbcType="VARCHAR" property="feedManufactor" />-->
+<!--    <result column="feed_no" jdbcType="VARCHAR" property="feedNo" />-->
+<!--    <result column="feed_date" jdbcType="TIMESTAMP" property="feedDate" />-->
+<!--    <result column="market_time" jdbcType="TIMESTAMP" property="marketTime" />-->
+<!--    <result column="self_test_time" jdbcType="TIMESTAMP" property="selfTestTime" />-->
+<!--    <result column="self_test_project" jdbcType="VARCHAR" property="selfTestProject" />-->
+<!--    <result column="self_test_type" jdbcType="VARCHAR" property="selfTestType" />-->
+<!--    <result column="self_test_result" jdbcType="VARCHAR" property="selfTestResult" />-->
+<!--    <result column="self_test_guid" jdbcType="VARCHAR" property="selfTestGuid" />-->
+<!--    <result column="other_test_time" jdbcType="TIMESTAMP" property="otherTestTime" />-->
+<!--    <result column="other_test_project" jdbcType="VARCHAR" property="otherTestProject" />-->
+<!--    <result column="other_test_type" jdbcType="VARCHAR" property="otherTestType" />-->
+<!--    <result column="other_test_result" jdbcType="VARCHAR" property="otherTestResult" />-->
+<!--    <result column="other_test_guid" jdbcType="VARCHAR" property="otherTestGuid" />-->
+<!--  </resultMap>-->
+<!--  <sql id="Base_Column_List">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    breed_only_key, user_id, product_name, product_num, unit, origin_address, product_no, -->
+<!--    breed_time, medicine_name, medicine_manufactor, medicine_no, medicine_use_time, medicine_unit, -->
+<!--    feed_name, feed_manufactor, feed_no, feed_date, market_time, self_test_time, self_test_project, -->
+<!--    self_test_type, self_test_result, self_test_guid, other_test_time, other_test_project, -->
+<!--    other_test_type, other_test_result, other_test_guid-->
+<!--  </sql>-->
+<!--  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    select -->
+<!--    <include refid="Base_Column_List" />-->
+<!--    from breed-->
+<!--    where breed_only_key = #{breedOnlyKey,jdbcType=VARCHAR}-->
+<!--  </select>-->
+<!--  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    delete from breed-->
+<!--    where breed_only_key = #{breedOnlyKey,jdbcType=VARCHAR}-->
+<!--  </delete>-->
+<!--  <insert id="insert" parameterType="com.entity.AAA">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    insert into breed (breed_only_key, user_id, product_name, -->
+<!--      product_num, unit, origin_address, -->
+<!--      product_no, breed_time, medicine_name, -->
+<!--      medicine_manufactor, medicine_no, medicine_use_time, -->
+<!--      medicine_unit, feed_name, feed_manufactor, -->
+<!--      feed_no, feed_date, market_time, -->
+<!--      self_test_time, self_test_project, self_test_type, -->
+<!--      self_test_result, self_test_guid, other_test_time, -->
+<!--      other_test_project, other_test_type, other_test_result, -->
+<!--      other_test_guid)-->
+<!--    values (#{breedOnlyKey,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, -->
+<!--      #{productNum,jdbcType=INTEGER}, #{unit,jdbcType=VARCHAR}, #{originAddress,jdbcType=VARCHAR}, -->
+<!--      #{productNo,jdbcType=VARCHAR}, #{breedTime,jdbcType=TIMESTAMP}, #{medicineName,jdbcType=VARCHAR}, -->
+<!--      #{medicineManufactor,jdbcType=VARCHAR}, #{medicineNo,jdbcType=VARCHAR}, #{medicineUseTime,jdbcType=TIMESTAMP}, -->
+<!--      #{medicineUnit,jdbcType=VARCHAR}, #{feedName,jdbcType=VARCHAR}, #{feedManufactor,jdbcType=VARCHAR}, -->
+<!--      #{feedNo,jdbcType=VARCHAR}, #{feedDate,jdbcType=TIMESTAMP}, #{marketTime,jdbcType=TIMESTAMP}, -->
+<!--      #{selfTestTime,jdbcType=TIMESTAMP}, #{selfTestProject,jdbcType=VARCHAR}, #{selfTestType,jdbcType=VARCHAR}, -->
+<!--      #{selfTestResult,jdbcType=VARCHAR}, #{selfTestGuid,jdbcType=VARCHAR}, #{otherTestTime,jdbcType=TIMESTAMP}, -->
+<!--      #{otherTestProject,jdbcType=VARCHAR}, #{otherTestType,jdbcType=VARCHAR}, #{otherTestResult,jdbcType=VARCHAR}, -->
+<!--      #{otherTestGuid,jdbcType=VARCHAR})-->
+<!--  </insert>-->
+<!--  <insert id="insertSelective" parameterType="com.entity.AAA">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    insert into breed-->
+<!--    <trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--      <if test="breedOnlyKey != null">-->
+<!--        breed_only_key,-->
+<!--      </if>-->
+<!--      <if test="userId != null">-->
+<!--        user_id,-->
+<!--      </if>-->
+<!--      <if test="productName != null">-->
+<!--        product_name,-->
+<!--      </if>-->
+<!--      <if test="productNum != null">-->
+<!--        product_num,-->
+<!--      </if>-->
+<!--      <if test="unit != null">-->
+<!--        unit,-->
+<!--      </if>-->
+<!--      <if test="originAddress != null">-->
+<!--        origin_address,-->
+<!--      </if>-->
+<!--      <if test="productNo != null">-->
+<!--        product_no,-->
+<!--      </if>-->
+<!--      <if test="breedTime != null">-->
+<!--        breed_time,-->
+<!--      </if>-->
+<!--      <if test="medicineName != null">-->
+<!--        medicine_name,-->
+<!--      </if>-->
+<!--      <if test="medicineManufactor != null">-->
+<!--        medicine_manufactor,-->
+<!--      </if>-->
+<!--      <if test="medicineNo != null">-->
+<!--        medicine_no,-->
+<!--      </if>-->
+<!--      <if test="medicineUseTime != null">-->
+<!--        medicine_use_time,-->
+<!--      </if>-->
+<!--      <if test="medicineUnit != null">-->
+<!--        medicine_unit,-->
+<!--      </if>-->
+<!--      <if test="feedName != null">-->
+<!--        feed_name,-->
+<!--      </if>-->
+<!--      <if test="feedManufactor != null">-->
+<!--        feed_manufactor,-->
+<!--      </if>-->
+<!--      <if test="feedNo != null">-->
+<!--        feed_no,-->
+<!--      </if>-->
+<!--      <if test="feedDate != null">-->
+<!--        feed_date,-->
+<!--      </if>-->
+<!--      <if test="marketTime != null">-->
+<!--        market_time,-->
+<!--      </if>-->
+<!--      <if test="selfTestTime != null">-->
+<!--        self_test_time,-->
+<!--      </if>-->
+<!--      <if test="selfTestProject != null">-->
+<!--        self_test_project,-->
+<!--      </if>-->
+<!--      <if test="selfTestType != null">-->
+<!--        self_test_type,-->
+<!--      </if>-->
+<!--      <if test="selfTestResult != null">-->
+<!--        self_test_result,-->
+<!--      </if>-->
+<!--      <if test="selfTestGuid != null">-->
+<!--        self_test_guid,-->
+<!--      </if>-->
+<!--      <if test="otherTestTime != null">-->
+<!--        other_test_time,-->
+<!--      </if>-->
+<!--      <if test="otherTestProject != null">-->
+<!--        other_test_project,-->
+<!--      </if>-->
+<!--      <if test="otherTestType != null">-->
+<!--        other_test_type,-->
+<!--      </if>-->
+<!--      <if test="otherTestResult != null">-->
+<!--        other_test_result,-->
+<!--      </if>-->
+<!--      <if test="otherTestGuid != null">-->
+<!--        other_test_guid,-->
+<!--      </if>-->
+<!--    </trim>-->
+<!--    <trim prefix="values (" suffix=")" suffixOverrides=",">-->
+<!--      <if test="breedOnlyKey != null">-->
+<!--        #{breedOnlyKey,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="userId != null">-->
+<!--        #{userId,jdbcType=INTEGER},-->
+<!--      </if>-->
+<!--      <if test="productName != null">-->
+<!--        #{productName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="productNum != null">-->
+<!--        #{productNum,jdbcType=INTEGER},-->
+<!--      </if>-->
+<!--      <if test="unit != null">-->
+<!--        #{unit,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="originAddress != null">-->
+<!--        #{originAddress,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="productNo != null">-->
+<!--        #{productNo,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="breedTime != null">-->
+<!--        #{breedTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="medicineName != null">-->
+<!--        #{medicineName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="medicineManufactor != null">-->
+<!--        #{medicineManufactor,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="medicineNo != null">-->
+<!--        #{medicineNo,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="medicineUseTime != null">-->
+<!--        #{medicineUseTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="medicineUnit != null">-->
+<!--        #{medicineUnit,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedName != null">-->
+<!--        #{feedName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedManufactor != null">-->
+<!--        #{feedManufactor,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedNo != null">-->
+<!--        #{feedNo,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedDate != null">-->
+<!--        #{feedDate,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="marketTime != null">-->
+<!--        #{marketTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="selfTestTime != null">-->
+<!--        #{selfTestTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="selfTestProject != null">-->
+<!--        #{selfTestProject,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="selfTestType != null">-->
+<!--        #{selfTestType,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="selfTestResult != null">-->
+<!--        #{selfTestResult,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="selfTestGuid != null">-->
+<!--        #{selfTestGuid,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestTime != null">-->
+<!--        #{otherTestTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="otherTestProject != null">-->
+<!--        #{otherTestProject,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestType != null">-->
+<!--        #{otherTestType,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestResult != null">-->
+<!--        #{otherTestResult,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestGuid != null">-->
+<!--        #{otherTestGuid,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--    </trim>-->
+<!--  </insert>-->
+<!--  <update id="updateByPrimaryKeySelective" parameterType="com.entity.AAA">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    update breed-->
+<!--    <set>-->
+<!--      <if test="userId != null">-->
+<!--        user_id = #{userId,jdbcType=INTEGER},-->
+<!--      </if>-->
+<!--      <if test="productName != null">-->
+<!--        product_name = #{productName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="productNum != null">-->
+<!--        product_num = #{productNum,jdbcType=INTEGER},-->
+<!--      </if>-->
+<!--      <if test="unit != null">-->
+<!--        unit = #{unit,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="originAddress != null">-->
+<!--        origin_address = #{originAddress,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="productNo != null">-->
+<!--        product_no = #{productNo,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="breedTime != null">-->
+<!--        breed_time = #{breedTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="medicineName != null">-->
+<!--        medicine_name = #{medicineName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="medicineManufactor != null">-->
+<!--        medicine_manufactor = #{medicineManufactor,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="medicineNo != null">-->
+<!--        medicine_no = #{medicineNo,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="medicineUseTime != null">-->
+<!--        medicine_use_time = #{medicineUseTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="medicineUnit != null">-->
+<!--        medicine_unit = #{medicineUnit,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedName != null">-->
+<!--        feed_name = #{feedName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedManufactor != null">-->
+<!--        feed_manufactor = #{feedManufactor,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedNo != null">-->
+<!--        feed_no = #{feedNo,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="feedDate != null">-->
+<!--        feed_date = #{feedDate,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="marketTime != null">-->
+<!--        market_time = #{marketTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="selfTestTime != null">-->
+<!--        self_test_time = #{selfTestTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="selfTestProject != null">-->
+<!--        self_test_project = #{selfTestProject,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="selfTestType != null">-->
+<!--        self_test_type = #{selfTestType,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="selfTestResult != null">-->
+<!--        self_test_result = #{selfTestResult,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="selfTestGuid != null">-->
+<!--        self_test_guid = #{selfTestGuid,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestTime != null">-->
+<!--        other_test_time = #{otherTestTime,jdbcType=TIMESTAMP},-->
+<!--      </if>-->
+<!--      <if test="otherTestProject != null">-->
+<!--        other_test_project = #{otherTestProject,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestType != null">-->
+<!--        other_test_type = #{otherTestType,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestResult != null">-->
+<!--        other_test_result = #{otherTestResult,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="otherTestGuid != null">-->
+<!--        other_test_guid = #{otherTestGuid,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--    </set>-->
+<!--    where breed_only_key = #{breedOnlyKey,jdbcType=VARCHAR}-->
+<!--  </update>-->
+<!--  <update id="updateByPrimaryKey" parameterType="com.entity.AAA">-->
+<!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--    update breed-->
+<!--    set user_id = #{userId,jdbcType=INTEGER},-->
+<!--      product_name = #{productName,jdbcType=VARCHAR},-->
+<!--      product_num = #{productNum,jdbcType=INTEGER},-->
+<!--      unit = #{unit,jdbcType=VARCHAR},-->
+<!--      origin_address = #{originAddress,jdbcType=VARCHAR},-->
+<!--      product_no = #{productNo,jdbcType=VARCHAR},-->
+<!--      breed_time = #{breedTime,jdbcType=TIMESTAMP},-->
+<!--      medicine_name = #{medicineName,jdbcType=VARCHAR},-->
+<!--      medicine_manufactor = #{medicineManufactor,jdbcType=VARCHAR},-->
+<!--      medicine_no = #{medicineNo,jdbcType=VARCHAR},-->
+<!--      medicine_use_time = #{medicineUseTime,jdbcType=TIMESTAMP},-->
+<!--      medicine_unit = #{medicineUnit,jdbcType=VARCHAR},-->
+<!--      feed_name = #{feedName,jdbcType=VARCHAR},-->
+<!--      feed_manufactor = #{feedManufactor,jdbcType=VARCHAR},-->
+<!--      feed_no = #{feedNo,jdbcType=VARCHAR},-->
+<!--      feed_date = #{feedDate,jdbcType=TIMESTAMP},-->
+<!--      market_time = #{marketTime,jdbcType=TIMESTAMP},-->
+<!--      self_test_time = #{selfTestTime,jdbcType=TIMESTAMP},-->
+<!--      self_test_project = #{selfTestProject,jdbcType=VARCHAR},-->
+<!--      self_test_type = #{selfTestType,jdbcType=VARCHAR},-->
+<!--      self_test_result = #{selfTestResult,jdbcType=VARCHAR},-->
+<!--      self_test_guid = #{selfTestGuid,jdbcType=VARCHAR},-->
+<!--      other_test_time = #{otherTestTime,jdbcType=TIMESTAMP},-->
+<!--      other_test_project = #{otherTestProject,jdbcType=VARCHAR},-->
+<!--      other_test_type = #{otherTestType,jdbcType=VARCHAR},-->
+<!--      other_test_result = #{otherTestResult,jdbcType=VARCHAR},-->
+<!--      other_test_guid = #{otherTestGuid,jdbcType=VARCHAR}-->
+<!--    where breed_only_key = #{breedOnlyKey,jdbcType=VARCHAR}-->
+<!--  </update>-->
+
+<!--&lt;!&ndash;auto generated by MybatisCodeHelper on 2023-01-15&ndash;&gt;-->
+<!--  <select id="selectAll" resultMap="BaseResultMap">-->
+<!--    select-->
+<!--    <include refid="Base_Column_List"/>-->
+<!--    from breed-->
+<!--  </select>-->
+
+<!--&lt;!&ndash;auto generated by MybatisCodeHelper on 2023-01-15&ndash;&gt;-->
+<!--  <select id="selectByAll" resultMap="BaseResultMap">-->
+<!--    select-->
+<!--    <include refid="Base_Column_List"/>-->
+<!--    from breed-->
+<!--    <where>-->
+<!--      <if test="breedOnlyKey != null">-->
+<!--        and breed_only_key=#{breedOnlyKey,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="userId != null">-->
+<!--        and user_id=#{userId,jdbcType=INTEGER}-->
+<!--      </if>-->
+<!--      <if test="productName != null">-->
+<!--        and product_name=#{productName,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="productNum != null">-->
+<!--        and product_num=#{productNum,jdbcType=INTEGER}-->
+<!--      </if>-->
+<!--      <if test="unit != null">-->
+<!--        and unit=#{unit,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="originAddress != null">-->
+<!--        and origin_address=#{originAddress,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="productNo != null">-->
+<!--        and product_no=#{productNo,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="breedTime != null">-->
+<!--        and breed_time=#{breedTime,jdbcType=TIMESTAMP}-->
+<!--      </if>-->
+<!--      <if test="medicineName != null">-->
+<!--        and medicine_name=#{medicineName,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="medicineManufactor != null">-->
+<!--        and medicine_manufactor=#{medicineManufactor,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="medicineNo != null">-->
+<!--        and medicine_no=#{medicineNo,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="medicineUseTime != null">-->
+<!--        and medicine_use_time=#{medicineUseTime,jdbcType=TIMESTAMP}-->
+<!--      </if>-->
+<!--      <if test="medicineUnit != null">-->
+<!--        and medicine_unit=#{medicineUnit,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="feedName != null">-->
+<!--        and feed_name=#{feedName,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="feedManufactor != null">-->
+<!--        and feed_manufactor=#{feedManufactor,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="feedNo != null">-->
+<!--        and feed_no=#{feedNo,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="feedDate != null">-->
+<!--        and feed_date=#{feedDate,jdbcType=TIMESTAMP}-->
+<!--      </if>-->
+<!--      <if test="marketTime != null">-->
+<!--        and market_time=#{marketTime,jdbcType=TIMESTAMP}-->
+<!--      </if>-->
+<!--      <if test="selfTestTime != null">-->
+<!--        and self_test_time=#{selfTestTime,jdbcType=TIMESTAMP}-->
+<!--      </if>-->
+<!--      <if test="selfTestProject != null">-->
+<!--        and self_test_project=#{selfTestProject,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="selfTestType != null">-->
+<!--        and self_test_type=#{selfTestType,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="selfTestResult != null">-->
+<!--        and self_test_result=#{selfTestResult,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="selfTestGuid != null">-->
+<!--        and self_test_guid=#{selfTestGuid,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="otherTestTime != null">-->
+<!--        and other_test_time=#{otherTestTime,jdbcType=TIMESTAMP}-->
+<!--      </if>-->
+<!--      <if test="otherTestProject != null">-->
+<!--        and other_test_project=#{otherTestProject,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="otherTestType != null">-->
+<!--        and other_test_type=#{otherTestType,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="otherTestResult != null">-->
+<!--        and other_test_result=#{otherTestResult,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--      <if test="otherTestGuid != null">-->
+<!--        and other_test_guid=#{otherTestGuid,jdbcType=VARCHAR}-->
+<!--      </if>-->
+<!--    </where>-->
+<!--  </select>-->
+<!--</mapper>-->

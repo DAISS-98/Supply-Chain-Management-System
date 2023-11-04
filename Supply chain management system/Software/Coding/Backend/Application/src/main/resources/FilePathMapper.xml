@@ -1,0 +1,90 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="com.dao.FilePathMapper">-->
+<!--  <resultMap id="BaseResultMap" type="com.entity.FilePath">-->
+
+<!--    <id column="guid" jdbcType="VARCHAR" property="guid" />-->
+<!--    <result column="file_path" jdbcType="VARCHAR" property="filePath" />-->
+<!--    <result column="appendix_size" jdbcType="VARCHAR" property="appendixSize" />-->
+<!--    <result column="file_name" jdbcType="VARCHAR" property="fileName" />-->
+<!--  </resultMap>-->
+<!--  <sql id="Base_Column_List">-->
+
+<!--    guid, file_path, appendix_size, file_name-->
+<!--  </sql>-->
+<!--  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">-->
+
+<!--    select-->
+<!--    <include refid="Base_Column_List" />-->
+<!--    from file_path-->
+<!--    where guid = #{guid,jdbcType=VARCHAR}-->
+<!--  </select>-->
+<!--  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">-->
+
+<!--    delete from file_path-->
+<!--    where guid = #{guid,jdbcType=VARCHAR}-->
+<!--  </delete>-->
+<!--  <insert id="insert" parameterType="com.entity.FilePath">-->
+
+<!--    insert into file_path (guid, file_path, appendix_size,-->
+<!--      file_name)-->
+<!--    values (#{guid,jdbcType=VARCHAR}, #{filePath,jdbcType=VARCHAR}, #{appendixSize,jdbcType=VARCHAR},-->
+<!--      #{fileName,jdbcType=VARCHAR})-->
+<!--  </insert>-->
+<!--  <insert id="insertSelective" parameterType="com.entity.FilePath">-->
+
+<!--    insert into file_path-->
+<!--    <trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--      <if test="guid != null">-->
+<!--        guid,-->
+<!--      </if>-->
+<!--      <if test="filePath != null">-->
+<!--        file_path,-->
+<!--      </if>-->
+<!--      <if test="appendixSize != null">-->
+<!--        appendix_size,-->
+<!--      </if>-->
+<!--      <if test="fileName != null">-->
+<!--        file_name,-->
+<!--      </if>-->
+<!--    </trim>-->
+<!--    <trim prefix="values (" suffix=")" suffixOverrides=",">-->
+<!--      <if test="guid != null">-->
+<!--        #{guid,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="filePath != null">-->
+<!--        #{filePath,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="appendixSize != null">-->
+<!--        #{appendixSize,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="fileName != null">-->
+<!--        #{fileName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--    </trim>-->
+<!--  </insert>-->
+<!--  <update id="updateByPrimaryKeySelective" parameterType="com.entity.FilePath">-->
+
+<!--    update file_path-->
+<!--    <set>-->
+<!--      <if test="filePath != null">-->
+<!--        file_path = #{filePath,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="appendixSize != null">-->
+<!--        appendix_size = #{appendixSize,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="fileName != null">-->
+<!--        file_name = #{fileName,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--    </set>-->
+<!--    where guid = #{guid,jdbcType=VARCHAR}-->
+<!--  </update>-->
+<!--  <update id="updateByPrimaryKey" parameterType="com.entity.FilePath">-->
+
+<!--    update file_path-->
+<!--    set file_path = #{filePath,jdbcType=VARCHAR},-->
+<!--      appendix_size = #{appendixSize,jdbcType=VARCHAR},-->
+<!--      file_name = #{fileName,jdbcType=VARCHAR}-->
+<!--    where guid = #{guid,jdbcType=VARCHAR}-->
+<!--  </update>-->
+<!--</mapper>-->

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.StoreMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Store">
+    <!--@mbg.generated-->
+    <!--@Table store-->
+    <id column="store_key" jdbcType="VARCHAR" property="storeKey" />
+    <result column="store_name" jdbcType="VARCHAR" property="storeName" />
+    <result column="store_address" jdbcType="VARCHAR" property="storeAddress" />
+    <result column="store_person" jdbcType="VARCHAR" property="storePerson" />
+    <result column="store_intime" jdbcType="TIMESTAMP" property="storeIntime" />
+    <result column="store_fresh" jdbcType="VARCHAR" property="storeFresh" />
+    <result column="store_c" jdbcType="VARCHAR" property="storeC" />
+    <result column="store_humidity" jdbcType="VARCHAR" property="storeHumidity" />
+    <result column="store_info" jdbcType="VARCHAR" property="storeInfo" />
+    <result column="store_other" jdbcType="VARCHAR" property="storeOther" />
+    <result column="store_user_id" jdbcType="BIGINT" property="storeUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    store_key, store_name, store_address, store_person, store_intime, store_fresh, store_c, 
+    store_humidity, store_info, store_other, store_user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from store
+    where store_key = #{storeKey,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from store
+    where store_key = #{storeKey,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.entity.Store">
+    <!--@mbg.generated-->
+    insert into store (store_key, store_name, store_address, 
+      store_person, store_intime, store_fresh, 
+      store_c, store_humidity, store_info, 
+      store_other, store_user_id)
+    values (#{storeKey,jdbcType=VARCHAR}, #{storeName,jdbcType=VARCHAR}, #{storeAddress,jdbcType=VARCHAR}, 
+      #{storePerson,jdbcType=VARCHAR}, #{storeIntime,jdbcType=TIMESTAMP}, #{storeFresh,jdbcType=VARCHAR}, 
+      #{storeC,jdbcType=VARCHAR}, #{storeHumidity,jdbcType=VARCHAR}, #{storeInfo,jdbcType=VARCHAR}, 
+      #{storeOther,jdbcType=VARCHAR}, #{storeUserId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.Store">
+    <!--@mbg.generated-->
+    insert into store
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="storeKey != null">
+        store_key,
+      </if>
+      <if test="storeName != null">
+        store_name,
+      </if>
+      <if test="storeAddress != null">
+        store_address,
+      </if>
+      <if test="storePerson != null">
+        store_person,
+      </if>
+      <if test="storeIntime != null">
+        store_intime,
+      </if>
+      <if test="storeFresh != null">
+        store_fresh,
+      </if>
+      <if test="storeC != null">
+        store_c,
+      </if>
+      <if test="storeHumidity != null">
+        store_humidity,
+      </if>
+      <if test="storeInfo != null">
+        store_info,
+      </if>
+      <if test="storeOther != null">
+        store_other,
+      </if>
+      <if test="storeUserId != null">
+        store_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="storeKey != null">
+        #{storeKey,jdbcType=VARCHAR},
+      </if>
+      <if test="storeName != null">
+        #{storeName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAddress != null">
+        #{storeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="storePerson != null">
+        #{storePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="storeIntime != null">
+        #{storeIntime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeFresh != null">
+        #{storeFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="storeC != null">
+        #{storeC,jdbcType=VARCHAR},
+      </if>
+      <if test="storeHumidity != null">
+        #{storeHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="storeInfo != null">
+        #{storeInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeOther != null">
+        #{storeOther,jdbcType=VARCHAR},
+      </if>
+      <if test="storeUserId != null">
+        #{storeUserId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.Store">
+    <!--@mbg.generated-->
+    update store
+    <set>
+      <if test="storeName != null">
+        store_name = #{storeName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAddress != null">
+        store_address = #{storeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="storePerson != null">
+        store_person = #{storePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="storeIntime != null">
+        store_intime = #{storeIntime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeFresh != null">
+        store_fresh = #{storeFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="storeC != null">
+        store_c = #{storeC,jdbcType=VARCHAR},
+      </if>
+      <if test="storeHumidity != null">
+        store_humidity = #{storeHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="storeInfo != null">
+        store_info = #{storeInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeOther != null">
+        store_other = #{storeOther,jdbcType=VARCHAR},
+      </if>
+      <if test="storeUserId != null">
+        store_user_id = #{storeUserId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where store_key = #{storeKey,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.Store">
+    <!--@mbg.generated-->
+    update store
+    set store_name = #{storeName,jdbcType=VARCHAR},
+      store_address = #{storeAddress,jdbcType=VARCHAR},
+      store_person = #{storePerson,jdbcType=VARCHAR},
+      store_intime = #{storeIntime,jdbcType=TIMESTAMP},
+      store_fresh = #{storeFresh,jdbcType=VARCHAR},
+      store_c = #{storeC,jdbcType=VARCHAR},
+      store_humidity = #{storeHumidity,jdbcType=VARCHAR},
+      store_info = #{storeInfo,jdbcType=VARCHAR},
+      store_other = #{storeOther,jdbcType=VARCHAR},
+      store_user_id = #{storeUserId,jdbcType=BIGINT}
+    where store_key = #{storeKey,jdbcType=VARCHAR}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2023-01-16-->
+  <select id="selectByAll" resultMap="BaseResultMap">
+        select b.transport_key  superKey,
+        <include refid="Base_Column_List" />
+        from store a
+        right  join `transport`  b on a.store_key = b.transport_key
+        <where>
+            <if test="storeKey != null">
+                and store_key=#{storeKey,jdbcType=VARCHAR}
+            </if>
+            <if test="storeName != null">
+                and store_name=#{storeName,jdbcType=VARCHAR}
+            </if>
+            <if test="storeAddress != null">
+                and store_address=#{storeAddress,jdbcType=VARCHAR}
+            </if>
+            <if test="storePerson != null">
+                and store_person=#{storePerson,jdbcType=VARCHAR}
+            </if>
+            <if test="storeIntime != null">
+                and store_intime=#{storeIntime,jdbcType=TIMESTAMP}
+            </if>
+            <if test="storeFresh != null">
+                and store_fresh=#{storeFresh,jdbcType=VARCHAR}
+            </if>
+            <if test="storeC != null">
+                and store_c=#{storeC,jdbcType=VARCHAR}
+            </if>
+            <if test="storeHumidity != null">
+                and store_humidity=#{storeHumidity,jdbcType=VARCHAR}
+            </if>
+            <if test="storeInfo != null">
+                and store_info=#{storeInfo,jdbcType=VARCHAR}
+            </if>
+            <if test="storeOther != null">
+                and store_other=#{storeOther,jdbcType=VARCHAR}
+            </if>
+            <if test="storeUserId != null">
+                and  (store_user_id=#{storeUserId,jdbcType=BIGINT} or store_user_id is null )
+            </if>
+        </where>
+    </select>
+</mapper>

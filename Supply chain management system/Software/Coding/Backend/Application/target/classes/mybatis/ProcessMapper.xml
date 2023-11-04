@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ProcessMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Process">
+    <!--@mbg.generated-->
+    <!--@Table `process`-->
+    <id column="process_key" jdbcType="VARCHAR" property="processKey" />
+    <result column="process_name" jdbcType="VARCHAR" property="processName" />
+    <result column="process_get_date" jdbcType="TIMESTAMP" property="processGetDate" />
+    <result column="process_time" jdbcType="TIMESTAMP" property="processTime" />
+    <result column="process_address" jdbcType="VARCHAR" property="processAddress" />
+    <result column="process_person" jdbcType="VARCHAR" property="processPerson" />
+    <result column="process_fresh" jdbcType="VARCHAR" property="processFresh" />
+    <result column="process_c" jdbcType="VARCHAR" property="processC" />
+    <result column="process_humidity" jdbcType="VARCHAR" property="processHumidity" />
+    <result column="process_user_id" jdbcType="BIGINT" property="processUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    process_key, process_name, process_get_date, process_time, process_address, process_person, 
+    process_fresh, process_c, process_humidity, process_user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from `process`
+    where process_key = #{processKey,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from `process`
+    where process_key = #{processKey,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.entity.Process">
+    <!--@mbg.generated-->
+    insert into `process` (process_key, process_name, process_get_date, 
+      process_time, process_address, process_person, 
+      process_fresh, process_c, process_humidity, 
+      process_user_id)
+    values (#{processKey,jdbcType=VARCHAR}, #{processName,jdbcType=VARCHAR}, #{processGetDate,jdbcType=TIMESTAMP}, 
+      #{processTime,jdbcType=TIMESTAMP}, #{processAddress,jdbcType=VARCHAR}, #{processPerson,jdbcType=VARCHAR}, 
+      #{processFresh,jdbcType=VARCHAR}, #{processC,jdbcType=VARCHAR}, #{processHumidity,jdbcType=VARCHAR}, 
+      #{processUserId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.Process">
+    <!--@mbg.generated-->
+    insert into `process`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="processKey != null">
+        process_key,
+      </if>
+      <if test="processName != null">
+        process_name,
+      </if>
+      <if test="processGetDate != null">
+        process_get_date,
+      </if>
+      <if test="processTime != null">
+        process_time,
+      </if>
+      <if test="processAddress != null">
+        process_address,
+      </if>
+      <if test="processPerson != null">
+        process_person,
+      </if>
+      <if test="processFresh != null">
+        process_fresh,
+      </if>
+      <if test="processC != null">
+        process_c,
+      </if>
+      <if test="processHumidity != null">
+        process_humidity,
+      </if>
+      <if test="processUserId != null">
+        process_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="processKey != null">
+        #{processKey,jdbcType=VARCHAR},
+      </if>
+      <if test="processName != null">
+        #{processName,jdbcType=VARCHAR},
+      </if>
+      <if test="processGetDate != null">
+        #{processGetDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="processTime != null">
+        #{processTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="processAddress != null">
+        #{processAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="processPerson != null">
+        #{processPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="processFresh != null">
+        #{processFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="processC != null">
+        #{processC,jdbcType=VARCHAR},
+      </if>
+      <if test="processHumidity != null">
+        #{processHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="processUserId != null">
+        #{processUserId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.Process">
+    <!--@mbg.generated-->
+    update `process`
+    <set>
+      <if test="processName != null">
+        process_name = #{processName,jdbcType=VARCHAR},
+      </if>
+      <if test="processGetDate != null">
+        process_get_date = #{processGetDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="processTime != null">
+        process_time = #{processTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="processAddress != null">
+        process_address = #{processAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="processPerson != null">
+        process_person = #{processPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="processFresh != null">
+        process_fresh = #{processFresh,jdbcType=VARCHAR},
+      </if>
+      <if test="processC != null">
+        process_c = #{processC,jdbcType=VARCHAR},
+      </if>
+      <if test="processHumidity != null">
+        process_humidity = #{processHumidity,jdbcType=VARCHAR},
+      </if>
+      <if test="processUserId != null">
+        process_user_id = #{processUserId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where process_key = #{processKey,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.Process">
+    <!--@mbg.generated-->
+    update `process`
+    set process_name = #{processName,jdbcType=VARCHAR},
+      process_get_date = #{processGetDate,jdbcType=TIMESTAMP},
+      process_time = #{processTime,jdbcType=TIMESTAMP},
+      process_address = #{processAddress,jdbcType=VARCHAR},
+      process_person = #{processPerson,jdbcType=VARCHAR},
+      process_fresh = #{processFresh,jdbcType=VARCHAR},
+      process_c = #{processC,jdbcType=VARCHAR},
+      process_humidity = #{processHumidity,jdbcType=VARCHAR},
+      process_user_id = #{processUserId,jdbcType=BIGINT}
+    where process_key = #{processKey,jdbcType=VARCHAR}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2023-01-16-->
+  <select id="selectByAll" resultMap="BaseResultMap">
+        select   b.produce_key  superKey,
+        <include refid="Base_Column_List"/>
+        from `process` a
+             right  join `produce`  b on a.process_key = b.produce_key
+        <where>
+            <if test="processKey != null">
+                and process_key=#{processKey,jdbcType=VARCHAR}
+            </if>
+            <if test="processName != null">
+                and process_name=#{processName,jdbcType=VARCHAR}
+            </if>
+            <if test="processGetDate != null">
+                and process_get_date=#{processGetDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="processTime != null">
+                and process_time=#{processTime,jdbcType=TIMESTAMP}
+            </if>
+            <if test="processAddress != null">
+                and process_address=#{processAddress,jdbcType=VARCHAR}
+            </if>
+            <if test="processPerson != null">
+                and process_person=#{processPerson,jdbcType=VARCHAR}
+            </if>
+            <if test="processFresh != null">
+                and process_fresh=#{processFresh,jdbcType=VARCHAR}
+            </if>
+            <if test="processC != null">
+                and process_c=#{processC,jdbcType=VARCHAR}
+            </if>
+            <if test="processHumidity != null">
+                and process_humidity=#{processHumidity,jdbcType=VARCHAR}
+            </if>
+            <if test="processUserId != null">
+                and (process_user_id=#{processUserId,jdbcType=BIGINT} or process_user_id is null )
+            </if>
+        </where>
+    </select>
+</mapper>

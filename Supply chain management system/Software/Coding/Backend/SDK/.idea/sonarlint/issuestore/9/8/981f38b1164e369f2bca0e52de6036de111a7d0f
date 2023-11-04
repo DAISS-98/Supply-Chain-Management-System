@@ -1,0 +1,10 @@
+
+`	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(èÝÎÑþÿÿÿÿ
+Y
+java:S2259M"CA "NullPointerException" could be thrown; "isKey" is nullable here.(¢±™Ù
+b
+java:S2095="LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(šÑ½ÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(÷¤¿‘ûÿÿÿÿ
+E
+java:S2093:"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

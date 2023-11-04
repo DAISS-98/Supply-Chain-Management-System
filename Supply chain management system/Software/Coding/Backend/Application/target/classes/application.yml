@@ -1,0 +1,35 @@
+server:
+  port: 9999
+
+# 数据库数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: 2023agriculture
+    password: 123456
+    url: jdbc:mysql://110.42.205.39:3306/2023agriculture?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+  http:
+    multipart:
+      maxFileSize: 100Mb
+      maxRequestSize: 1000Mb
+
+  # 映射resource.static下文件，使之可以通过url地址直接访问
+  mvc:
+    static-path-pattern: /**
+
+mybatis:
+  type-aliases-package:  com.example.entity #   别名
+  mapper-locations: classpath:/mybatis/*.xml   #   xml文件
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  file:
+    name: log/log.log
+  level:
+    root: info
+    wuhobin: debug
+
+
+
